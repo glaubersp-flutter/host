@@ -1,7 +1,5 @@
 import 'dart:collection';
 
-import 'package:app1/firstPage.dart';
-import 'package:app2/app2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,33 +29,13 @@ class AppListModel {
       title: Text(title),
       subtitle: Text(version ?? 'Not set'),
       onTap: () {
-        Navigator.push(context, appMaterialPageRoute(context, key));
+        // Modular.to.pushNamed('/login');
+        Navigator.pushNamed(context, key);
       },
     );
   }
 
   void add(String key, String name, String version) {
     _items.add(_AppListItem(key, version, name));
-  }
-
-  MaterialPageRoute appMaterialPageRoute(BuildContext context, String title) {
-    switch (title) {
-      case 'app1':
-        return MaterialPageRoute(
-          builder: (context) {
-            return FirstPage();
-          },
-        );
-        break;
-      case 'app2':
-        return MaterialPageRoute(
-          builder: (context) {
-            return SecondPageWidget();
-          },
-        );
-        break;
-      default:
-        return null;
-    }
   }
 }

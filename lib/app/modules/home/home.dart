@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:host/app/modules/login/credential_model.dart';
-import 'package:provider/provider.dart';
 import 'package:yaml/yaml.dart';
 
 import 'app_list_model.dart';
@@ -54,11 +52,7 @@ class _AppListState extends State<AppList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Consumer<CredentialModel>(
-          builder: (ctx, cred, child) {
-            return Text('${cred.name}\'s app list');
-          },
-        )),
+        title: Center(child: Text("App list")),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'credential_model.dart';
 
@@ -84,8 +84,8 @@ class LoginFormState extends State<StatefulWidget> {
 
   void _loginAction(BuildContext context) {
     if (_formKey.currentState.validate()) {
-      Provider.of<CredentialModel>(context, listen: false)
-          .setCredential("email@test.com", "username");
+      var model = Modular.get<CredentialModel>();
+      model.setCredential("email@test.com", "username");
       Navigator.pushNamed(
         context,
         '/home',
@@ -93,10 +93,7 @@ class LoginFormState extends State<StatefulWidget> {
       );
       Scaffold.of(context)
         ..removeCurrentSnackBar()
-        ..showSnackBar(SnackBar(
-            content: Consumer<CredentialModel>(builder: (context, cred, child) {
-          return Text("See you soon: ${cred.name}");
-        })));
+        ..showSnackBar(SnackBar(content: Text("See you soon: ${model.name}")));
     }
   }
 
