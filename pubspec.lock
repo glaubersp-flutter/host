@@ -53,9 +53,11 @@ packages:
   convex_app_bar_example:
     dependency: "direct main"
     description:
-      path: "../app1"
-      relative: true
-    source: path
+      path: "."
+      ref: external_app
+      resolved-ref: "4a5d1273b4dbaedadc3c55bc3d64066c38901e3d"
+      url: "git@github.com:glaubersp-flutter/app1.git"
+    source: git
     version: "1.0.0"
   convex_bottom_bar:
     dependency: transitive
