@@ -9,16 +9,8 @@ class LoginWidget extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Builder(
-            builder: (context) {
-              return Column(
-                children: [
-                  Image.asset('assets/logo.jpg'),
-                  LoginForm(),
-                ],
-              );
-            },
-          ),
+          Expanded(child: Image.asset('assets/logo.jpg')),
+          LoginForm(),
         ],
       ),
     );
