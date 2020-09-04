@@ -97,22 +97,22 @@ class LoginFormState extends State<StatefulWidget> {
   }
 
   String validateEmail(value) {
-    if (value.isEmpty) {
-      return 'Email cannot be blank';
-    }
-    if (value != "email@test.com") {
-      return 'Senha errada';
-    }
+    // if (value.isEmpty) {
+    //   return 'Email cannot be blank';
+    // }
+    // if (value != "email@test.com") {
+    //   return 'Invalid email';
+    // }
     return null;
   }
 
   String _validatePassword(value) {
-    if (value.isEmpty) {
-      return 'Password cannot be blank';
-    }
-    if (value != "password") {
-      return 'Wrong password.';
-    }
+    // if (value.isEmpty) {
+    //   return 'Password cannot be blank';
+    // }
+    // if (value != "password") {
+    //   return 'Wrong password.';
+    // }
     return null;
   }
 }

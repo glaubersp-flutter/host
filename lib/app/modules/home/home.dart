@@ -25,13 +25,13 @@ class _AppListState extends State<AppList> {
   }
 
   Future<void> _initAppListModel() async {
-    var appListModel = await loadAppListModelEntries();
+    var appListModel = await _loadAppListModelEntries();
     setState(() {
       _appListModel = appListModel;
     });
   }
 
-  Future<AppListModel> loadAppListModelEntries() {
+  Future<AppListModel> _loadAppListModelEntries() {
     return DefaultAssetBundle.of(context)
         .loadString('assets/app_list.yaml')
         .then((String yamlFile) {
@@ -52,7 +52,7 @@ class _AppListState extends State<AppList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("App list")),
+        title: Text("App list"),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),

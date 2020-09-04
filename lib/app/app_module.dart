@@ -18,7 +18,7 @@ class AppModule extends MainModule {
   List<ModularRouter> get routers => [
         ModularRouter(Modular.initialRoute, child: (_, __) => LoginWidget()),
         ModularRouter('/home', child: (_, __) => HomeWidget()),
-        ModularRouter('/app1', module: App1Module()),
+        ModularRouter('/convex_app_bar_example', module: App1Module()),
         ModularRouter('/app2', module: App2Module()),
       ];
 

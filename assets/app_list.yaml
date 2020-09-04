@@ -1,9 +1,9 @@
 # Check how to read a file from a dependency loaded from git
 app1:
-  key: app1 # Key to find app entry on pubspec.yaml file
-  name: App 1
-  version: 1.1.1 # Should be taken from pubspec.yaml using key
+  key: convex_app_bar_example # Key to find app entry on pubspec.yaml file
+  name: Convex Bar Example
+  version: 1.0.0 # Should be taken from pubspec.yaml using key
 app2:
   key: app2 # Key to find app entry on pubspec.yaml file
-  name: App 2
+  name: Weather Example
   version: 1.1.0 # Should be taken from pubspec.yaml using key
