@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - geocoding (1.0.3):
     - Flutter
-  - "geolocator (6.0.0+2)":
+  - "geolocator (6.0.0+4)":
     - Flutter
   - package_info (0.0.1):
     - Flutter
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   geocoding: ba2dc798e5d24ea68a3ff47cccee2590b7f06345
-  geolocator: d5851ad43b7b6f5ceed0638c8a7f1ec34f240c63
+  geolocator: 1ae40084cc6c1586ce5ad12cfc3fd38c64d05f2f
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
 
