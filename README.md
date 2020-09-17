@@ -2,16 +2,16 @@
 
 Host app
 
-## Getting Started
+## Flutter Test Driver and integration tests
 
-This project is a starting point for a Flutter application.
+Packages can export only files inside /lib and /bin folders.
 
-A few resources to get you started if this is your first Flutter project:
+To allow driver_test files to be written inside each sub-app project and used by the host app, a file must be created inside each sub-app /lib folder to export only the tests and allow them to be imported in the host test file.
+The downside of this approach is that the tests will be exported to the users of the library (in this case, the host can see the driver_test files but not the other tests from the app2, for example.)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Another option would be to create a new package to contain the tests for each sub-app, but this option has a higher complexity and may face dependency problems.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# host
+To execute the integration tests:
+
+    cd host/
+    flutter drive --target=test_driver/app.dart
