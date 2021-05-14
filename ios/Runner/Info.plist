@@ -41,5 +41,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Use current location to get weather.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Use current location to get weather.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Use current location to get weather.</string>
 </dict>
 </plist>
